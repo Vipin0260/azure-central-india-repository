@@ -1,0 +1,22 @@
+{
+	"name": "gitlink_dic",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "gitcon",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "Vipin0260/azure-central-india-repository/main/data_dictionary.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
