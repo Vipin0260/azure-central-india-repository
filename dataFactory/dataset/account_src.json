@@ -1,0 +1,23 @@
+{
+	"name": "account_src",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkgitacc_src",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "Vipin0260/azure-central-india-repository/blob/main/accounts.csv"
+			},
+			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": null
+		},
+		"schema": []
+	}
+}
