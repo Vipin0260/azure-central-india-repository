@@ -1,0 +1,9 @@
+{
+	"name": "crmdatafactorycentral",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2a480b5a-d596-4bcd-a5e4-9e38963d9337",
+		"tenantId": "6734905a-7385-4039-80cb-0e131e5771da"
+	}
+}
