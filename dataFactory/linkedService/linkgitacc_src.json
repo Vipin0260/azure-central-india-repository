@@ -1,0 +1,15 @@
+{
+	"name": "linkgitacc_src",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://github.com/Vipin0260/azure-central-india-repository/blob/main/",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Basic",
+			"userName": "Vipin0260",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEJGRDQ5OTI3LThEMEUtNDE4RS05QzhCLTkyMUE0QTUxQ0JDOV9kODhkOTRhMy1kZjA4LTQwMDAtOWYyNC04Y2ZlMTQyMWMzOGQiDQp9"
+		}
+	}
+}
