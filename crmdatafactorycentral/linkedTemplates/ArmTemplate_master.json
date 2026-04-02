@@ -1,0 +1,98 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "crmdatafactorycentral"
+		},
+		"gitcon_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'gitcon'"
+		},
+		"linkgitacc_src_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'linkgitacc_src'"
+		},
+		"sink_link_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'sink_link'"
+		},
+		"gitcon_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/"
+		},
+		"gitcon_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Vipin0260"
+		},
+		"linkgitacc_src_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://github.com/"
+		},
+		"linkgitacc_src_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Vipin0260"
+		},
+		"sink_link_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://indiacentralstoracc.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "crmdatafactorycentral_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"gitcon_password": {
+						"value": "[parameters('gitcon_password')]"
+					},
+					"linkgitacc_src_password": {
+						"value": "[parameters('linkgitacc_src_password')]"
+					},
+					"sink_link_accountKey": {
+						"value": "[parameters('sink_link_accountKey')]"
+					},
+					"gitcon_properties_typeProperties_url": {
+						"value": "[parameters('gitcon_properties_typeProperties_url')]"
+					},
+					"gitcon_properties_typeProperties_userName": {
+						"value": "[parameters('gitcon_properties_typeProperties_userName')]"
+					},
+					"linkgitacc_src_properties_typeProperties_url": {
+						"value": "[parameters('linkgitacc_src_properties_typeProperties_url')]"
+					},
+					"linkgitacc_src_properties_typeProperties_userName": {
+						"value": "[parameters('linkgitacc_src_properties_typeProperties_userName')]"
+					},
+					"sink_link_properties_typeProperties_url": {
+						"value": "[parameters('sink_link_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
